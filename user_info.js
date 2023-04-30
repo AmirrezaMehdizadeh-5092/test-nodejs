@@ -1,0 +1,84 @@
+const mongose = require("mongoose");
+
+const UserInfo = mongose.Schema({
+	namee:
+	{
+		type:String,
+   		minLength:4,
+    	maxlength:50,
+    	required:true,
+    	index:
+    	{
+     	 	unique:true,
+     	 	dropDups:true
+    	}
+	},
+	passwordd:
+	{
+		type:String,
+	    minLength:6,
+	    maxlength:100,
+	    required:true,
+	    index:
+	    {
+	      unique:true,
+	      dropDups:true
+	    }
+	},
+	helppasswordd:
+	{
+		type:String,
+	    minLength:6,
+	    maxlength:100,
+	    required:true,
+	    index:
+	    {
+	      unique:true,
+	      dropDups:true
+	    }
+	},
+	emaill:
+	{
+		type:String,
+	    minLength:9,
+	    maxlength:100,
+	    required:true,
+	    index:
+	    {
+	      unique:true,
+	      dropDups:true
+	    }
+	},
+	statuss:
+	{
+		type:String,
+	    minLength:9,
+	    maxlength:100,
+	    required:true,
+	    index:
+	    {
+	      unique:true,
+	      dropDups:true
+	    }
+	},
+	VerifyCode:
+	{
+		type:String,
+	    minLength:5,
+	    maxlength:100,
+	    required:true,
+	    index:
+	    {
+	      unique:true,
+	      dropDups:true
+	    }
+	},
+    joinDate:
+    {
+      type:Date,
+      default : Date.now
+    }
+})
+
+User = mongose.model("User" , UserInfo);
+module.exports = User;

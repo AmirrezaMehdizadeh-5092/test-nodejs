@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/static5/verregister.css">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Verify</title>
+<a id="homelink" href="http://localhost:1234">Home</a></li>
+<div id="login-box">
+  <div class="left">
+    <form action="" method="post">
+      <h1>Verify Acoount</h1>
+      <p id="span2">!check your email and enter verify code</p>
+      <div id="formdiv" id="vercodediv">
+        <i class="fa fa-close" id="usernamecls" onclick="usernamecls()"></i>
+        <input required type="text" name="vercode" placeholder="Verify Code" id="vercode" />
+      </div>
+      <input required type="submit" name="signup_submit" value="Verify Me" id="subbut" />
+    </form>
+  </div>
+
+  <div class="right">
+    <img id="img11" src="/static2/ocean_0.jpg" height="255" width="295" alt="">
+  </div>
+</div>
+
+<h4 id="h4"></h4>
+
+<script>
+  function usernamecls() {
+    var input1 = document.querySelector("#vercode");
+    input1.value = "";
+  }
+</script>

@@ -1,0 +1,5 @@
+.env
+node_modules/
+CodePen_Export_QWgrPvp/
+*.bat
+potoub-html/
